@@ -1,0 +1,46 @@
+
+
+
+body {
+    background-image: url('https://assets.cambridgeone.org/ielts/pc/v2/img/bg-image-ielts.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  div.b{
+    text-align: right;
+  }
+
+  a{
+    color: white;  
+  }
+
+  .small-img{
+      height: 200px;
+      width: 200px;
+  }
+
+  .my-img{
+      height: 100px;
+      width: 100px;
+  }
+
+  @font-face{
+    font-family: 'FontAwesome';
+    src: url("https://assets.cambridgeone.org/ielts/1624337269107/fontawesome-webfont.woff2") format('woff2'),
+         url("https://assets.cambridgeone.org/ielts/1624337269107/fontawesome-webfont.woff2") format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  div{
+      font-family: 'FontAwesome' ;
+  }
