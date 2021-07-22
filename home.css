@@ -1,8 +1,5 @@
-
-
-
 body {
-    background-image: url('https://assets.cambridgeone.org/ielts/pc/v2/img/bg-image-ielts.png');
+    background: url('./Assets/home-sprite-2.png') -1px -0px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -59,3 +56,9 @@ body {
 .master-card { background-position: -458px -5152px; width: 452px; height: 292px; }
 .visa-icon { background-position: -458px -5445px; width: 432px; height: 292px; }
 .favicon-96x96 { background-position: -876px -3975px; width: 192px; height: 192px; }
+
+.bg-image-ielts, .ieltsi-logo
+{ display: inline-block; background: url('./Assets/home-sprite-2.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+ 
+.bg-image-ielts { background-position: -1px -0px; width: 1440px; height: 1023px; }
+.ieltsi-logo { background-position: -1px -1024px; width: 286px; height: 94px; }
