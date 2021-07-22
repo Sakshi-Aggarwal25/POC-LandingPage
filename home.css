@@ -44,3 +44,18 @@ body {
   div{
       font-family: 'FontAwesome' ;
   }
+
+.step-2, .people-logo, .step-1, .step-4, .step-3, 
+.step-6, .amex, .master-card, .visa-icon, .favicon-96x96
+{ display: inline-block; background: url('./Assets/home-sprite-1a.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+ 
+.step-2 { background-position: -1px -0px; width: 1074px; height: 668px; }
+.people-logo { background-position: -1px -669px; width: 1000px; height: 342px; }
+.step-1 { background-position: -1px -1012px; width: 982px; height: 930px; }
+.step-4 { background-position: -1px -1943px; width: 982px; height: 998px; }
+.step-3 { background-position: -1px -2942px; width: 948px; height: 1032px; }
+.step-6 { background-position: -1px -3975px; width: 874px; height: 1176px; }
+.amex { background-position: -1px -5152px; width: 456px; height: 298px; }
+.master-card { background-position: -458px -5152px; width: 452px; height: 292px; }
+.visa-icon { background-position: -458px -5445px; width: 432px; height: 292px; }
+.favicon-96x96 { background-position: -876px -3975px; width: 192px; height: 192px; }
