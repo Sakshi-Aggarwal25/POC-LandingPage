@@ -1,9 +1,9 @@
-body {
-    background: url('./Assets/home-sprite-2.png') -1px -0px;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
+.mybg {
+  background: url('https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/home-sprite-2.png') -1px -0px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
   .btn {
     background-color: DodgerBlue;
@@ -30,19 +30,11 @@ body {
       height: 100px;
       width: 100px;
   }
-
-  @font-face{
-    font-family: 'FontAwesome';
-    src: url("./Assets/fontawesome-webfont.woff2") format('woff2'),
-         url("./Assets/fontawesome-webfont.woff") format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
   div{
       font-family: 'FontAwesome' ;
   }
 
-.step-2, .people-logo, .step-1, .step-4, .step-3, 
+/* .step-2, .people-logo, .step-1, .step-4, .step-3, 
 .step-6, .amex, .master-card, .visa-icon, .favicon-96x96
 { display: inline-block; background: url('./Assets/home-sprite-1a.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
  
@@ -61,4 +53,4 @@ body {
 { display: inline-block; background: url('./Assets/home-sprite-2.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
  
 .bg-image-ielts { background-position: -1px -0px; width: 1440px; height: 1023px; }
-.ieltsi-logo { background-position: -1px -1024px; width: 286px; height: 94px; }
+.ieltsi-logo { background-position: -1px -1024px; width: 286px; height: 94px; } */
