@@ -1,9 +1,9 @@
 .mybg {
-    background: url('https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/home-sprite-2.png') -1px -0px;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
+  background: url('https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/bg-image-ielts.png') -1px -0px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
   .btn {
     background-color: DodgerBlue;
@@ -30,21 +30,13 @@
       height: 100px;
       width: 100px;
   }
-
-  @font-face{
-    font-family: 'FontAwesome';
-    src: url("https://asgard-thor-assets.comprodls.com/ielts/1626877125587/fontawesome-webfont.woff2") format('woff2'),
-         url("https://asgard-thor-assets.comprodls.com/ielts/1626877125587/fontawesome-webfont.woff") format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
   div{
       font-family: 'FontAwesome' ;
   }
 
-.step-2, .people-logo, .step-1, .step-4, .step-3, 
+/* .step-2, .people-logo, .step-1, .step-4, .step-3, 
 .step-6, .amex, .master-card, .visa-icon, .favicon-96x96
-{ display: inline-block; background: url('https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/home-sprite-1.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+{ display: inline-block; background: url('./Assets/home-sprite-1a.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
  
 .step-2 { background-position: -1px -0px; width: 1074px; height: 668px; }
 .people-logo { background-position: -1px -669px; width: 1000px; height: 342px; }
@@ -58,7 +50,7 @@
 .favicon-96x96 { background-position: -876px -3975px; width: 192px; height: 192px; }
 
 .bg-image-ielts, .ieltsi-logo
-{ display: inline-block; background: url('https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/home-sprite-2.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+{ display: inline-block; background: url('./Assets/home-sprite-2.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
  
 .bg-image-ielts { background-position: -1px -0px; width: 1440px; height: 1023px; }
-.ieltsi-logo { background-position: -1px -1024px; width: 286px; height: 94px; }
+.ieltsi-logo { background-position: -1px -1024px; width: 286px; height: 94px; } */
