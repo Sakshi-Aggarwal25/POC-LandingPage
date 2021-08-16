@@ -1,69 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css" as="style">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="./Assets/mulifonts.css">
+    <title>Home | IELTSi | Cambridge One</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <link rel="stylesheet" type="text/css" href="./assets/mulifonts.css">
+    <link rel="stylesheet" type="text/css" href="./home.css">
     
-    <style>
-        @font-face {
-            font-family: 'FontAwesome';
-            src: url('./Assets/fontawesome-webfont.woff2') format('woff2'),
-                url('./Assets/fontawesome-webfont.woff') format('woff'),
-                url('./Assets/CUP.woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
-    </style>
 </head>
-
 <body>
-    <div class="mybg">
-        <img src="https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/cup-logo.svg">
-    <br>
-    <img src="https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/IELTSi_logo.png">
-    <br>
-    <div class="b">
-        <a href="https://micro-nemo.comprodls.com/login?ielts=true"> Log in</a>
-        <a href="https://micro-nemo.comprodls.com/register-learner?ielts=true"> Signup</a>
+    <div class="starter">
+        <div class="main-wrapper d-flex">
+            <div class="d-flex flex-column w-100">
+                <div id="imgBackgroundIelts" class="content-wrapper bg-wrapper">
+                    <div class="header-root">
+                        <div class="d-flex h-100 align-items-center">
+                            <div class="navbar-brand mr-auto py-0">
+                                <img id="imgCUPLogo" src="" class="navbar-brand mr-auto py-0"
+                                    alt="Cambridge University Press Logo" />
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <a qid="home-1" id="ieltslandingpage-header-login-btn"
+                                    class="btn btn-xs btn-white-bg login-btn" href="javascript:void(0);"
+                                    onclick="login()">Log in</a>
+                                <div class="dropdown lang-dropdown">
+                                    <a qid="home-2" class="dropdown-toggle" href="javascript:void(0)"
+                                        id="dropdownMenuLinkHome" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false" [attr.aria-label]="English">
+                                        <i class="nemo-font nemo-language align-middle" aria-hidden="true"></i>
+                                        <span class="font-xs d-none d-sm-inline">En</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right mt-3"
+                                        aria-labelledby="dropdownMenuLinkHome">
+                                        <div class="arrow"></div>
+
+                                        <button qid="home-3" class="dropdown-item"
+                                            (click)="changeLanguage(language)">English</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <main class="content container-fluid px-0">
+                        <div class="announcement-wrapper">
+                            <service-announcement></service-announcement>
+                        </div>
+                        <div class="row-wrapper">
+                            <div class="home-wrapper text-center">
+                                <h1 class="mb-1 mb-md-2 heading-part">Cambridge One</h1>
+                                <div class="ielts-heading">
+                                    <img id="imgIELTSLogo" class="ielts-logo" src=""
+                                        alt="IELTS Intelligence logo" />
+                                </div>
+                                <p class="ready-for-test">Are you ready for your IELTS test?</p>
+                                <p class="home-desc mt-3 mb-2 my-md-5">Check your IELTS skills and get personalised
+                                    feedback reports with expert tips and advice on how to improve.</p>
+                                <p class="price-notify mb-4 mb-md-5">
+
+                                    <span>Feedback reports from</span>
+                                    <span class="currencySymbol"></span><span class="priceIeltsi4"></span>
+                                    <span> - no monthly charge.</span>
+
+                                </p>
+                                <a qid="home-6" class="btn btn-lg btn-white btn-started d-flex justify-content-center align-items-center"
+                                    href="javascript:void(0);"
+                                onclick="getStarted()">
+                                    <span class="started-btn-text">Get started</span>
+                                    <img id="imgLongArrowRight" src="" aria-hidden="true" alt="" />
+                                </a>
+                                <p class="text-or m-lg-3">or
+                                </p>
+                                <a qid="home-7"
+                                    class="mb-3 btn btn-lg btn-white-bordered btn-try-for-free d-flex justify-content-center align-items-center" href="javascript:void(0);"
+                                    onclick="tryForFree()">
+                                    <span class="started-btn-text">Try for free</span>
+                                    <img id="imgLongArrowRightWhite" src="" aria-hidden="true"
+                                        alt="" />
+                                    </a>
+                                <img id="imgPeopleLogo" class="people-logo" src=""
+                                    alt="Four happy IELTS intelligence students" />
+                            </div>
+                        </div>
+                    </main>
+                </div>
+                <div class="marketing-wrapper text-center">
+                    <h2 class="marketing-heading text-center mt-4 mb-3 mt-lg-5 mb-lg-4">Features
+                    </h2>
+                    <div class="features-section row container-fluid no-gutters">
+                        <div class="marketingcontent-wrapper col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
+                            <div class="marketing-points mb-4 mb-lg-5">
+                                <h3 class="data-heading d-flex align-items-center"><i class="tick-icon nemo-font nemo-tick py-1" aria-hidden="true"></i>
+                                    No monthly charge
+                                </h3>
+                                <p class="feature-desc mt-1 mb-0 pl-4">One-off payment per feedback report.</p>
+                            </div>
+                            <div class="marketing-points mb-4 mb-lg-5">
+                                <h3 class="data-heading d-flex align-items-center"><i class="tick-icon nemo-font nemo-tick py-1" aria-hidden="true"></i>
+                                    Works anywhere
+                                </h3>
+                                <p class="feature-desc mt-1 mb-0 pl-4">IELTS intelligence works on desktop, tablet and
+                                    mobile devices.</p>
+                            </div>
+                            <div class="marketing-points mb-4 mb-lg-5">
+                                <h3 class="data-heading d-flex align-items-center"><i class="tick-icon nemo-font nemo-tick py-1" aria-hidden="true"></i>
+                                    Go at your own pace
+                                </h3>
+                                <p class="feature-desc mt-1 mb-0 pl-4">Save your progress as you go and submit your
+                                    answers later.</p>
+                            </div>
+                            <div class="marketing-points mb-4 mb-lg-5">
+                                <div class="data-heading d-flex align-items-center">
+                                    <i class="tick-icon nemo-font nemo-tick py-1" aria-hidden="true"></i>
+                                    <span>Personalised Feedback</span>
+                                </div>
+                                <p class="feature-desc mt-1 mb-0 pl-4">The detailed feedback report explains right and
+                                    wrong answers and is full of expert tips on how to improve.</p>
+                            </div>
+                            <div class="marketing-points">
+                                <h3 class="data-heading d-flex align-items-center">
+                                    <i class="tick-icon nemo-font nemo-tick py-1" aria-hidden="true"></i>
+                                    Easy access dashboard
+                                </h3>
+                                <p class="feature-desc mt-1 mb-0 pl-4">Continue unfinished questions and check results
+                                    and reports for completed attempts.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mini-tests-section justify-content-center no-gutters" *ngIf="miniTestData">
+                        <h2 class="mini-section-heading text-center mt-4 mb-3 mt-lg-5">Choose the best pack for you
+                        </h2>
+                        <div class="feature-desc mini-section-heading-2 text-center mb-lg-4">Available for Academic
+                            Reading and Listening skills
+
+                        </div>
+                        <div class="tiles-container row mb-4 flex-column flex-lg-row">
+                            <div class="mini-tests-list mb-2 mb-md-3 ml-lg-0 col-12 col-lg px-0">
+                                <div class="best-deal">BEST DEAL</div>
+
+                                <div class="mini-test-body px-3 px-md-4 pt-3 pt-md-5">
+                                    <h3 class="mini-test-heading mb-4">IELTSi 30</h3>
+
+                                    <p class="mini-test-content mb-4 text-left">
+                                        <span class='test-price'><sup class="currencySymbol"></sup><span class="priceIeltsi30"></span></span>
+                                        <span class="desc-part">for a detailed feedback report</span>
+                                    </p>
+
+
+                                    <p class="mini-test-content mb-2 mb-md-4 text-left">Want to know where to focus your
+                                        study time to get the best score?</p>
+                                    <ul>
+                                        <li class="mini-test-content text-left mb-0">
+                                            <strong>30 </strong> IELTS-style questions
+                                        </li>
+                                        <li class="mini-test-content text-left mb-0">
+                                            Covers <strong>a range of</strong> task types
+                                        </li>
+                                        <li class="mini-test-content text-left mb-0">
+                                            Approx <strong>40</strong> minutes to complete
+                                        </li>
+                                        <li class="mini-test-content text-left mb-0">
+                                            In-depth feedback on your answers
+                                        </li>
+                                        <li class="mini-test-content text-left mb-3 mb-md-5">
+                                            Quality tips to help you improve
+                                        </li>
+                                    </ul>
+                                </div>
+                                </div>
+                            <div class="mini-tests-list mb-2 mb-md-3 ml-lg-0 col-12 col-lg px-0">
+
+                                <div class="mini-test-body px-3 px-md-4 pt-3 pt-md-5">
+                                    <h3 class="mini-test-heading mb-4">IELTSi 8</h3>
+
+                                    <p class="mini-test-content mb-4 text-left">
+                                        <span class='test-price'><sup class="currencySymbol"></sup><span class="priceIeltsi8"></span></span>
+                                        <span class="desc-part">for a detailed feedback report</span>
+                                    </p>
+
+
+                                    <p class="mini-test-content mb-2 mb-md-4 text-left">Need more practice in specific
+                                        skills to achieve your target score?</p>
+                                    <ul>
+                                        <li class="mini-test-content text-left mb-0">
+                                            <strong>8 </strong> IELTS-style questions
+                                        </li>
+                                        <li class="mini-test-content text-left mb-0">
+                                            Extended practice of <strong>specific task type</strong>
+                                        </li>
+                                        <li class="mini-test-content text-left mb-0">
+                                            Approx <strong>15</strong> minutes to complete
+                                        </li>
+                                        <li class="mini-test-content text-left mb-0">
+                                            In-depth feedback on your answers
+                                        </li>
+                                        <li class="mini-test-content text-left mb-3 mb-md-5">
+                                            Quality tips to help you improve
+                                        </li>
+                                    </ul>
+                                </div>
+                                </div>
+                            <div class="mini-tests-list mb-2 mb-md-3 ml-lg-0 col-12 col-lg px-0">
+
+                                <div class="mini-test-body px-3 px-md-4 pt-3 pt-md-5">
+                                    <h3 class="mini-test-heading mb-4">IELTSi 4</h3>
+
+                                    <p class="mini-test-content mb-4 text-left">
+                                        <span class="test-price"><sup class="currencySymbol"></sup><span class="priceIeltsi4"></span></span>
+                                        <span class="desc-part">for a detailed feedback report</span>
+                                    </p>
+
+
+                                    <p class="mini-test-content mb-2 mb-md-4 text-left">Looking for a quick, focused
+                                        practice to boost your score in your weaker areas?</p>
+                                    <ul>
+                                        <li class="mini-test-content text-left mb-0">
+                                            <strong>4 </strong> IELTS-style questions
+                                        </li>
+                                        <li class="mini-test-content text-left mb-0">
+                                            Focused practice of <strong>specific task type</strong>
+                                        </li>
+                                        <li class="mini-test-content text-left mb-0">
+                                            Approx <strong>5</strong> minutes to complete
+                                        </li>
+                                        <li class="mini-test-content text-left mb-0">
+                                            In-depth feedback on your answers
+                                        </li>
+                                        <li class="mini-test-content text-left mb-3 mb-md-5">
+                                            Quality tips to help you improve
+                                        </li>
+                                    </ul>
+                                </div>
+                                </div>
+                                </div>
+                        <div class="mb-5 d-flex home-actions flex-column flex-md-row justify-content-center align-items-center">
+                            <a qid="home-7" href="javascript:void(0);"
+                                class="btn btn-lg btn-purple btn-started d-flex justify-content-center align-items-center" (click)="register()">
+                                <span class="started-btn-text">Get started</span>
+                                <img id="imgLongArrowRightInverted" src="" aria-hidden="true"
+                                    alt="" />
+                            </a>
+                        </div>
+                        </div>
+                    <div class="marketing-heading text-center working-heading pb-3 pb-md-4 pb-lg-5">How it works</div>
+                    <div class="working-steps container-fluid px-0">
+                        <div class="row steps-and-image mb-md-1 mb-lg-4 no-gutters">
+                            <div
+                                class="working-step pb-4 pb-md-3 col-lg-4 offset-lg-1 d-flex flex-column text-center text-lg-left order-0 pl-lg-5 pr-lg-5">
+                                <div class="step-number">01</div>
+                                <h2 class="step-heading mb-1">Create your account</h2>
+                                <div class="offset-md-3 col-md-6 offset-lg-0 col-lg-12 px-lg-0">
+                                    <p class="mb-0 step-description">Simply sign up to get started.</p>
+                                </div>
+                            </div>
+                            <div class="step-right-wrapper step-1-settings pb-3 col-lg-6 order-1 text-center text-lg-right pl-lg-3">
+                                <img id="imgStep1" class="step-img" src=""
+                                    alt="IELTS Intelligence account creation form" />
+                            </div>
+                        </div>
+                        <div class="row steps-and-image mb-md-1 mb-lg-4 no-gutters">
+                            <div class="working-step pb-4 col-lg-6 d-flex flex-column text-center text-lg-left order-0 order-lg-1 pr-lg-5 pl-lg-5">
+                                <div class="step-number">02</div>
+                                <h2 class="step-heading mb-1">Select a skill and target band score</h2>
+                                <div class="offset-md-2 col-md-8 offset-lg-0 col-lg-12 px-lg-0">
+                                    <p class="mb-0 step-description">Choose the IELTS skill you want and select your
+                                        target band score.</p>
+                                </div>
+                            </div>
+                            <div class="step-left-wrapper pb-3 col-lg-6 text-center text-lg-left pl-lg-0 pr-lg-3">
+                                <img id="imgStep2" class="step-img" src=""
+                                    alt="Skill level and target band score input form" />
+                                <!-- <div class="sprite-step-2 step-img" attr.aria-label="{{ 'IELTSLANDING.HOME.STEP2_ALT'| translate}}"></div> -->
+                            </div>
+                        </div>
+                        <div class="row steps-and-image mb-md-1 mb-lg-4 no-gutters">
+                            <div class="working-step pb-4 col-lg-6 d-flex flex-column text-center text-lg-left order-0 pl-lg-5 pr-lg-5">
+                                <div class="step-number">03</div>
+                                <h2 class="step-heading mb-1">Check your IELTS skills</h2>
+                                <div class="offset-md-2 col-md-8 offset-lg-0 col-lg-12 px-lg-0">
+                                    <p class="mb-0 step-description">Answer the IELTS-style questions in your own time.
+                                        You can even save as you go and submit your answers later.</p>
+                                </div>
+                            </div>
+                            <div class="step-right-wrapper pb-3 col-lg-6 order-1 text-center text-lg-right pl-lg-3">
+                                <img id="imgStep3" class="step-img" src=""
+                                    alt="Example of IELTS style questions" />
+                            </div>
+                        </div>
+                        <div class="row steps-and-image mb-md-1 mb-lg-4 no-gutters">
+                            <div class="working-step pb-4 col-lg-6 d-flex flex-column text-center text-lg-left order-0 order-lg-1 pr-lg-5 pl-lg-4">
+                                <div class="step-number">04</div>
+                                <h2 class="step-heading mb-1">Instant feedback</h2>
+                                <div class="offset-md-2 col-md-8 offset-lg-0 col-lg-12 px-lg-0">
+                                    <p class="mb-0 step-description">Once you've submitted your answers, IELTS
+                                        intelligence checks them and instantly provides feedback. You'll see a sample of
+                                        your report.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="step-left-wrapper pb-3 col-lg-6 text-center text-lg-left pl-lg-0 pr-lg-3">
+                                <img id="imgStep4" class="step-img" src=""
+                                    alt="Example of sample feedback" />
+                            </div>
+                        </div>
+                        <div class="row steps-and-image mb-md-1 mb-lg-4 no-gutters">
+                            <div class="working-step pb-4 col-lg-6 d-flex flex-column text-center text-lg-right order-0 pl-lg-0 pr-lg-2 ml-lg-0">
+                                <div class="step-number">05</div>
+                                <h2 class="step-heading mb-1">Make a payment to unlock your full feedback report</h2>
+                                <div class="offset-md-2 col-md-8 offset-lg-0 col-lg-12 px-lg-0">
+                                    <p class="mb-0 step-description step-5-desc">Enter your credit or debit card details
+                                        into our secure payment system to unlock your full feedback report.</p>
+                                </div>
+                            </div>
+                            <div class="step-5-images display-block text-center pb-4 col-lg-6 order-1 text-center text-lg-left pl-lg-5 ml-lg-0">
+                                <img id="imgVisaIcon" class="billing-img mr-1" src=""
+                                    alt="Credit and debit card brands" />
+                                <img id="imgMasterCardIcon" class="billing-img mr-1" src=""
+                                    alt="Credit and debit card brands" />
+                                <img id="imgAmexIcon" class="billing-img mr-1" src=""
+                                    alt="Credit and debit card brands" />
+                            </div>
+                        </div>
+                        <div class="row steps-and-image mb-md-1 mb-lg-4 no-gutters">
+                            <div class="working-step pb-4 col-lg-6 d-flex flex-column text-center text-lg-left order-0 order-lg-1 pr-lg-5 pl-lg-4">
+                                <div class="step-number">06</div>
+                                <h2 class="step-heading mb-1">Access your full feedback report</h2>
+                                <div class="offset-md-2 col-md-8 offset-lg-0 col-lg-12 px-lg-0">
+                                    <p class="mb-0 step-description">Get your full IELTS intelligence feedback report.
+                                        It includes your results, explanations of right and wrong answers, and advice on
+                                        how to improve your skills.</p>
+                                </div>
+                            </div>
+                            <div class="step-right-wrapper pb-3 col-lg-6 text-center text-lg-left pr-md-0 pl-lg-0 pr-lg-3">
+                                <img id="imgStep6" class="step-img step-6-img" src=""
+                                    alt="Example of full feedback report" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="target-band-choose py-5">
+                        <p class="target-band-ques mb-4">What's your target band score?</p>
+                        <div class="mb-4 d-flex home-actions flex-column flex-md-row justify-content-center align-items-center">
+                            <a qid="home-8" href="javascript:void(0);"
+                                class="mb-3 btn btn-lg btn-white btn-started d-flex justify-content-center align-items-center" (click)="register()">
+                                <span class="started-btn-text">Sign up to check your skills</span>
+                                <img id="imgLongArrowRight2" src="" aria-hidden="true" alt="" />
+                            </a>
+                        </div>
+                        <p class="price-notify">
+                            <span>Feedback reports start from <span class="currencySymbol"></span><span class="priceIeltsi4"></span> - no monthly
+                                charge</span>
+                        </p>
+                    </div>
+
+                    <div class="testimonials-container pt-4">
+                        <div class="testimonal-head-1 text-center">IELTS intelligence</div>
+                        <div class="text-center testimonial-head-2">Testimonials</div>
+                        <div class="marketing-slider" id="m-slider">
+                            <div class="slider-crousal">
+                                <div class="rectangularBox">
+                                    <p class="review-text px-3">"Good analysis that helps me focus on the type of
+                                        questions to study"</p>
+                                </div>
+                            </div>
+                            <div class="slider-crousal">
+                                <div class="rectangularBox">
+                                    <p class="review-text px-3">"Incredibly helpful to improve reading skills"</p>
+                                </div>
+                            </div>
+                            <div class="slider-crousal">
+                                <div class="rectangularBox">
+                                    <p class="review-text px-3">"The Feedback 'check answers' feature is really useful"
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-dots text-center">
+                            <button></button>
+                            <button></button>
+                            <button></button>
+                        </div>
+                    </div>
+                    <h2 class="faqs-heading text-center mb-3 mt-lg-5 mb-lg-4">Frequently Asked Questions
+                    </h2>
+                    <div class="faqs-section row container-fluid text-center no-gutters">
+                        <div class="marketingcontent-wrapper col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
+                            <div class="marketing-points mb-4">
+                                <h3 class="data-heading">Which skills are available?</h3>
+                                <p class="faq-ans mt-2 mb-0">IELTS intelligence is currently available for Academic
+                                    Reading and Listening.</p>
+                            </div>
+                            <div class="marketing-points mb-4">
+                                <h3 class="data-heading">Is this service free?</h3>
+                                <p class="faq-ans mt-2 mb-0">It's free to try the IELTS-style questions to check your
+                                    skills. However, if you want to see explanations for your right and wrong answers
+                                    with expert advice and personalised tips on how to improve, the feedback report
+                                    starts from <span class="currencySymbol"></span><span class="priceIeltsi4"></span> - no monthly charge
+                                </p>
+                            </div>
+                            <div class="marketing-points mb-4">
+                                <h3 class="data-heading">Is it a real IELTS test?</h3>
+                                <p class="faq-ans mt-2 mb-0">No, IELTS intelligence uses IELTS-style questions to
+                                    instantly assess your ability in the skills you need for the real test. It's
+                                    co-developed by Cambridge Assessment English, the organisation that produces IELTS.
+                                </p>
+                            </div>
+                            <div class="marketing-points mb-4">
+                                <h3 class="data-heading">How long do I have to answer the questions?</h3>
+                                <p class="faq-ans mt-2 mb-0">There is no time limit. You can save your progress as you
+                                    go along and submit your answers later.</p>
+                            </div>
+                            <div class="marketing-points mb-4">
+                                <h3 class="data-heading">Will I get an IELTS band score?</h3>
+                                <p class="faq-ans mt-2 mb-0">No, you won't get an IELTS band score, but IELTS
+                                    intelligence highlights your strengths and weakness. You'll get tips and advice on
+                                    how to improve weaker areas so you can manage your study time effectively.</p>
+                                </div>
+                            <div class="marketing-points mb-4">
+                                <h3 class="data-heading">How will I know if I've improved?</h3>
+                                <p class="faq-ans mt-2 mb-0">You can check your IELTS skills multiple times and compare
+                                    your scores to see if you are improving. It's important to follow the study advice
+                                    in your feedback report before you try another IELTS intelligence skills check.</p>
+                                </div>
+                            <div class="marketing-points">
+                                <h3 class="data-heading">Do I have to download any software?</h3>
+                                <p class="faq-ans mt-2 mb-0">No, you don't have to download anything. Our software works
+                                    in the cloud so you can access IELTS intelligence wherever you are, and on any
+                                    device including mobile, tablet and desktop.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="target-band-choose py-5">
+                        <p class="target-band-ques mb-4 improve-scores">Let's improve your IELTS skills today!</p>
+                        <div class="mb-4 d-flex home-actions flex-column flex-md-row justify-content-center align-items-center">
+                            <a qid="home-9" href="javascript:void(0);"
+                                class="mb-3 btn btn-lg btn-white btn-started d-flex justify-content-center align-items-center" (click)="register()">
+                                <span class="started-btn-text">Sign up to check your skills</span>
+                                <img id="imgLongArrowRight3" src="" aria-hidden="true" alt="" />
+                            </a>
+                        </div>
+                        <p class="price-notify">
+                            <span>Feedback reports start from <span class="currencySymbol"></span><span class="priceIeltsi4"></span> - no monthly
+                                charge</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <br>
-    <img src="https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/long_arrow_right_inverted.svg"><img>
-    <img src="https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/long_arrow_right.svg"></img>
-    <img src="https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/long_arrow_right_white.svg"></img>
-    <br>
-
-    <img src="https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/people-logo.png">
-    </div>
-    
-    <br>
-    <img class="my-img" src="https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/step-1.png">
-    <img class="my-img" src="https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/step-2.png">
-    <img class="my-img" src="https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/step-3.png">
-    <img class="my-img" src="https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/step-4.png">
-    <img class="my-img" src="https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/visa-icon.png">
-    <img class="my-img" src="https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/master-card.png">
-    <img class="my-img" src="https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/amex.png">
-    <img class="my-img" src="https://asgard-thor-assets.comprodls.com/ielts/pc/v2/img/step-6.png">
-    <br>
-
-    <img class="my-img"
-        src="./Assets/icon/favicon-96x96.png">
-    <div>Cambridge</div>
-
-    <iframe id="Example"
-        title="Example"
-        width="400"
-        height="400"
-        src="http://localhost:8080/ieltsi/home">
-    </iframe>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script>
+                        let slider = tns({
+                            container: '.marketing-slider',
+                            slideBy: 1,
+                            axis: 'horizontal',
+                            navContainer: ".slider-dots",
+                            arrowKeys: true,
+                            controls: false,
+                            autoplay: false,
+                            swipeAngle: false,
+                            touch: true,
+                            preventScrollOnTouch: 'auto',
+                        responsive: {
+                            320: {
+                                items: 1,
+                                edgePadding: 50,
+                                loop: true,
+                                gutter: 16,
+                                startIndex: 1
+                            },
+                            768: {
+                                disable: true
+                            }
+                        }
+                    });
+    </script>
+    <script>
+        window.onload = function() {
+            var iframe = document.createElement("iframe");
+            iframe.style.display = "none";
+            iframe.src = 'https://micro-nemo.comprodls.com/ieltsi/home';
+            document.body.appendChild(iframe);
+        };
+    </script>
 </body>
 <script>
     (function (w, d, s, l, i) {
@@ -75,5 +504,6 @@
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-W2BSMLJ');
 </script>
-
+<script type="application/javascript" src="./index.js">
+</script>
 </html>
